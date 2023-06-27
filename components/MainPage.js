@@ -44,23 +44,36 @@ export default function MainPage () {
 		<>
 		<Header page={'main'} setPage={setPage} />
 		{page === 'main' &&
+		<>
 		<View style={styles.mainPageContainer}>
-			<Text style={styles.bigText}>
+			<Text style={styles.medText}>
 				I have a message to : 
 			</Text>
-			<TouchableOpacity
-				style={styles.button}
-				onPress={() => setPage('scrembl')}
-			>
-				<Text style={styles.buttonText}>Scrembl</Text>
-			</TouchableOpacity>
-			<TouchableOpacity
-				style={styles.button}
-				onPress={() => setPage('unscrembl')}
-			>
-				<Text style={styles.buttonText}>UnScrembl</Text>
-			</TouchableOpacity>
+			<View style={[styles.spaceAround, styles.mainButtonContainer]}>
+				<TouchableOpacity
+					style={styles.buttonSmall}
+					onPress={() => setPage('scrembl')}
+				>
+					<Text style={styles.buttonText}>Scrembl</Text>
+				</TouchableOpacity>
+				<TouchableOpacity
+					style={styles.buttonSmall}
+					onPress={() => setPage('unscrembl')}
+				>
+					<Text style={styles.buttonText}>UnScrembl</Text>
+				</TouchableOpacity>
+			</View>
 		</View>
+		<View>
+			<Text style={[styles.textSmall, styles.marginVert]}>
+				Convert plain text into gobbldegook, paste that into your socials and other people can paste it
+				back here to see what you wrote!
+			</Text>
+			<Text style={[styles.textSmall, styles.marginVert]}>
+				No messages are stored anywhere, not even in this App, your secrets are safe.
+			</Text>
+		</View>
+		</>
 		}
 		{page === 'scrembl' &&
 			<Scrembl />

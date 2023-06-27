@@ -28,6 +28,9 @@ export default styles = StyleSheet.create({
 		fontFamily        : 'CourierPrime-Bold',
         fontSize          : 24,
 	},
+	marginVert            : {
+		marginVertical    : 10,
+	},
 	settingsContainer     : {
 		marginTop         : '33%',
 		flex              : 1,
@@ -48,6 +51,10 @@ export default styles = StyleSheet.create({
 		paddingBottom     : 10,
 		paddingLeft       : 10,
 		paddingRight      : 10,
+	},
+	mainButtonContainer   : {
+		marginTop         : 20,
+		marginBottom      : 20,
 	},
 	historyScrollView     : {
 		marginTop         : 10,
@@ -84,6 +91,15 @@ export default styles = StyleSheet.create({
         justifyContent    : 'center',
         paddingVertical   : 12,
         paddingHorizontal : 32,
+        borderRadius      : 7,
+        elevation         : 3,
+        backgroundColor   : '#7b8dac',
+    },
+    buttonSmall           : {
+        alignItems        : 'center',
+        justifyContent    : 'center',
+        paddingVertical   : 6,
+        paddingHorizontal : 15,
         borderRadius      : 7,
         elevation         : 3,
         backgroundColor   : '#7b8dac',
@@ -178,7 +194,6 @@ export default styles = StyleSheet.create({
 		borderColor       : '#7b8dac',
 		padding           : 10,
 		borderRadius      : 5,
-		marginTop         : 10,
 	},
 	historyContainer      : {
 		flex              : 1,

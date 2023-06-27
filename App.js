@@ -1,5 +1,5 @@
 /**
- * DistanS : Measure walking, riding etc distance, with records.
+ * Scrembl : Obfusticate messages to post on socials that can be unobfusticated by others.
  *
  * @format
  * @flow strict-local
@@ -10,7 +10,6 @@ import React from 'react';
 import { useState }  from 'react';
 import { useEffect } from 'react';
 import { useRef }    from 'react';
-import { memo }      from 'react';
 import type {Node}   from 'react';
 
 import {

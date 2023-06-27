@@ -28,3 +28,15 @@ andyc@desktop:~/BUILD/scrembl-react-native/scremblV2$ vi android/app/src/main/re
 Android Studio - Build etc.
 
 
+Release Build etc :
+% keytool -genkeypair -v -storetype PKCS12 -keystore scremblev2.keystore -alias scremblv2-alias -keyalg RSA -keysize 2048 -validity 10000
+Then do it via Android Studio : Build -> Generate Signed Bundle or APK -> Android App Bundle -> Next ->
+	Key Store Path     : Full path outside this project
+	Key Store Password : As entered above
+	Key Alias          : scremblv2-alias
+	Key Password       : As entered above for want of anything else
+	Remember passwords and Export key select
+	-> Next -> release -> create
+￼
+￼
+

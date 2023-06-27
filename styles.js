@@ -66,6 +66,11 @@ export default styles = StyleSheet.create({
         justifyContent    : "space-between",
         alignItems        : 'center',
     },
+    spaceAround           : {
+        flexDirection     : "row",
+        justifyContent    : "space-around",
+        alignItems        : 'center',
+    },
     mauveBox              : {
         marginTop         : 7,
         marginBottom      : 7,
@@ -173,6 +178,7 @@ export default styles = StyleSheet.create({
 		borderColor       : '#7b8dac',
 		padding           : 10,
 		borderRadius      : 5,
+		marginTop         : 10,
 	},
 	historyContainer      : {
 		flex              : 1,
@@ -185,5 +191,9 @@ export default styles = StyleSheet.create({
 	historyTrackBar       : {
 		flex              : 1,
 		alignSelf         : 'baseline',
+	},
+	clearIcon             : {
+		padding           : 15,
+		alignSelf         : 'flex-end',
 	},
 });

@@ -34,7 +34,10 @@ import {
 } from 'react-native';
 
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
-import { faClipboard }     from '@fortawesome/free-solid-svg-icons';
+import {
+	faClipboard,
+	faTrash,
+}                          from '@fortawesome/free-solid-svg-icons';
 import Clipboard           from '@react-native-clipboard/clipboard';
 import { colours }         from '../constants';
 import { unScrembl }       from '../functions/gubbins';
@@ -55,12 +58,23 @@ export default function () {
 		let unobfusticated = unScrembl(scrembledText);
 		setUnScrembledText(unobfusticated);
 	}
+	function clearText() {
+		setUnScrembledText('');
+		setScrembledText('');
+	}
 	return (
 		<KeyboardAvoidingView
 			behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
-			style={styles.centre}
 		>
-			<Text style={styles.medText}>UnScrembl a message</Text>
+            <View style={styles.spaceBetween}>
+                <Text style={styles.medText}>UnScrembl a message</Text>
+                <TouchableOpacity
+                    style={styles.clearIcon}
+                    onPress={() => clearText()}
+                >
+                    <FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faTrash} />
+                </TouchableOpacity>
+            </View>
 			<View style={styles.textInputContainer}>
 				<TouchableOpacity
 					style={styles.button}
@@ -73,13 +87,13 @@ export default function () {
 				</TouchableOpacity>
 				<TextInput style={styles.textInput}
 					multiline
-					editable
 					onChangeText={text => setScrembledText(text)}
 					value={scrembledText}
 					placeholder="Or type your Scrembled message here"
 					numberOfLines={4}
 				 />
 			</View>
+			<Text></Text>
             <TouchableOpacity
                 style={styles.button}
                 onPress={() => onUnScrembl()}
@@ -91,7 +105,6 @@ export default function () {
 				<View style={styles.textInputContainer}>
 					<TextInput style={styles.textInput}
 						multiline
-						editable={false}
 						value={unScrembledText}
 						placeholder="UnScrembled message here"
 						numberOfLines={4}

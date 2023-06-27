@@ -68,7 +68,7 @@ import styles       from './styles';
 
 // No magic numbers.
 //
-const scremblColour           = '#d018ec';
+const scremblColour           = '#7b8dac';
 const scremblGrey             = 'dimgray';
 const scremblWhite            = 'white';
 

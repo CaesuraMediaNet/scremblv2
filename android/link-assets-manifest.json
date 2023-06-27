@@ -1,0 +1,29 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/assets/fonts/CourierPrime-Bold.ttf",
+      "sha1": "ea491d42faae0061c4f04ea514874643ed128f05"
+    },
+    {
+      "path": "src/assets/fonts/CourierPrime-BoldItalic.ttf",
+      "sha1": "774537c23f1e4b86998b7dceb4477b169b7e178c"
+    },
+    {
+      "path": "src/assets/fonts/CourierPrime-Italic.ttf",
+      "sha1": "b2db781fbf2d2414ec13013a02e623725dcd935f"
+    },
+    {
+      "path": "src/assets/fonts/CourierPrime-Regular.ttf",
+      "sha1": "f0e110c73ff02b2fc7f60bd96697c42ee9730ae2"
+    },
+    {
+      "path": "src/assets/fonts/OFL.txt",
+      "sha1": "4ce72c5c100a3e2a1ded7ca5e3c09a482f121445"
+    },
+    {
+      "path": "src/assets/images/scrembl-icon.png",
+      "sha1": "5085dc9911a521f900f2df12ea6e080cc45df4ad"
+    }
+  ]
+}

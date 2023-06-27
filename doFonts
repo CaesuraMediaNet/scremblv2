@@ -1,0 +1,11 @@
+% cat react-native.config.js 
+module.exports = {
+    project: {
+        ios: {},
+        android: {}
+    },
+    assets: ['./src/assets/'],
+};
+Unzip Fonts to ./src/assets/fonts/
+% npx react-native-asset
+

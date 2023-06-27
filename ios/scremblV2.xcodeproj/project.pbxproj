@@ -14,6 +14,12 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-scremblV2-scremblV2Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-scremblV2-scremblV2Tests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		1294D6B4DCF84337BE6A0B31 /* CourierPrime-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C3BCEB0017394B5A9BF45FF7 /* CourierPrime-Bold.ttf */; };
+		9CCC8254BF774713B837547F /* CourierPrime-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1681C6FBF6AF42AD96C030BB /* CourierPrime-BoldItalic.ttf */; };
+		9F32D223871343E0B7352056 /* CourierPrime-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1B7DB7A4300844BF98F730BA /* CourierPrime-Italic.ttf */; };
+		9472777E68E040618D42F010 /* CourierPrime-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E93A09EA9BF849DC99C5C7A4 /* CourierPrime-Regular.ttf */; };
+		CF3384574F30420D96D17F0F /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = 645F9012BD1944EDACBE16FC /* OFL.txt */; };
+		C06EA6E3C10A4A0B8695FBA5 /* scrembl-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 51BE941BA5284869827BDC33 /* scrembl-icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,12 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = scremblV2/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-scremblV2-scremblV2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-scremblV2-scremblV2Tests.release.xcconfig"; path = "Target Support Files/Pods-scremblV2-scremblV2Tests/Pods-scremblV2-scremblV2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		C3BCEB0017394B5A9BF45FF7 /* CourierPrime-Bold.ttf */ = {isa = PBXFileReference; name = "CourierPrime-Bold.ttf"; path = "../src/assets/fonts/CourierPrime-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1681C6FBF6AF42AD96C030BB /* CourierPrime-BoldItalic.ttf */ = {isa = PBXFileReference; name = "CourierPrime-BoldItalic.ttf"; path = "../src/assets/fonts/CourierPrime-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		1B7DB7A4300844BF98F730BA /* CourierPrime-Italic.ttf */ = {isa = PBXFileReference; name = "CourierPrime-Italic.ttf"; path = "../src/assets/fonts/CourierPrime-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E93A09EA9BF849DC99C5C7A4 /* CourierPrime-Regular.ttf */ = {isa = PBXFileReference; name = "CourierPrime-Regular.ttf"; path = "../src/assets/fonts/CourierPrime-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		645F9012BD1944EDACBE16FC /* OFL.txt */ = {isa = PBXFileReference; name = "OFL.txt"; path = "../src/assets/fonts/OFL.txt"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		51BE941BA5284869827BDC33 /* scrembl-icon.png */ = {isa = PBXFileReference; name = "scrembl-icon.png"; path = "../src/assets/images/scrembl-icon.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +134,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				284BEBDBEDB848F999215058 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -147,6 +160,20 @@
 			);
 			path = Pods;
 			sourceTree = "<group>";
+		};
+		284BEBDBEDB848F999215058 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				C3BCEB0017394B5A9BF45FF7 /* CourierPrime-Bold.ttf */,
+				1681C6FBF6AF42AD96C030BB /* CourierPrime-BoldItalic.ttf */,
+				1B7DB7A4300844BF98F730BA /* CourierPrime-Italic.ttf */,
+				E93A09EA9BF849DC99C5C7A4 /* CourierPrime-Regular.ttf */,
+				645F9012BD1944EDACBE16FC /* OFL.txt */,
+				51BE941BA5284869827BDC33 /* scrembl-icon.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -244,6 +271,12 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				1294D6B4DCF84337BE6A0B31 /* CourierPrime-Bold.ttf in Resources */,
+				9CCC8254BF774713B837547F /* CourierPrime-BoldItalic.ttf in Resources */,
+				9F32D223871343E0B7352056 /* CourierPrime-Italic.ttf in Resources */,
+				9472777E68E040618D42F010 /* CourierPrime-Regular.ttf in Resources */,
+				CF3384574F30420D96D17F0F /* OFL.txt in Resources */,
+				C06EA6E3C10A4A0B8695FBA5 /* scrembl-icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

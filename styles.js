@@ -6,26 +6,26 @@ import {
 export default styles = StyleSheet.create({
     container             : {
         padding           : 10,
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
     },
     title                 : {
-		fontFamily        : 'PTSans-Bold',
+		fontFamily        : 'CourierPrime-Bold',
         fontSize          : 36,
     },
     titleMed              : {
-		fontFamily        : 'PTSans-Bold',
+		fontFamily        : 'CourierPrime-Bold',
         fontSize          : 24,
     },
 	textSmall             : {
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
         fontSize          : 10,
 	},
 	textBoldSmall         : {
-		fontFamily        : 'PTSans-Bold',
+		fontFamily        : 'CourierPrime-Bold',
         fontSize          : 10,
 	},
 	textBoldMed           : {
-		fontFamily        : 'PTSans-Bold',
+		fontFamily        : 'CourierPrime-Bold',
         fontSize          : 24,
 	},
 	settingsContainer     : {
@@ -41,7 +41,7 @@ export default styles = StyleSheet.create({
 	mainPageContainer     : {
 		borderWidth       : 1,
 		borderRadius      : 5,
-		borderColor       : "#d018ec",
+		borderColor       : "#7b8dac",
 		marginTop         : 10,
 		marginBottom      : 10,
 		paddingTop        : 10,
@@ -72,7 +72,7 @@ export default styles = StyleSheet.create({
         padding           : 5,
         borderWidth       : 1,
         borderRadius      : 4,
-        borderColor       : '#d018ec',
+        borderColor       : '#7b8dac',
     },
     button                : {
         alignItems        : 'center',
@@ -81,7 +81,7 @@ export default styles = StyleSheet.create({
         paddingHorizontal : 32,
         borderRadius      : 7,
         elevation         : 3,
-        backgroundColor   : '#d018ec',
+        backgroundColor   : '#7b8dac',
     },
     buttonInactive        : {
         alignItems        : 'center',
@@ -90,7 +90,7 @@ export default styles = StyleSheet.create({
         paddingHorizontal : 32,
         borderRadius      : 7,
         elevation         : 3,
-        backgroundColor   : '#d018ec',
+        backgroundColor   : '#7b8dac',
 		opacity           : 0.5,
     },
     buttonText            : {
@@ -98,7 +98,7 @@ export default styles = StyleSheet.create({
         lineHeight        : 21,
         letterSpacing     : 0.25,
         color             : 'white',
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
     },
 	centeredView          : {
 		flex              : 1,
@@ -121,41 +121,41 @@ export default styles = StyleSheet.create({
 		shadowOpacity     : 0.25,
 		shadowRadius      : 4,
 		elevation         : 5,
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
 	},
 	buttonClose           : {
-		backgroundColor   : '#d018ec',
-		fontFamily        : 'PTSans-Regular',
+		backgroundColor   : '#7b8dac',
+		fontFamily        : 'CourierPrime-Regular',
 	},
 	textStyle             : {
 		color             : 'white',
 		textAlign         : 'center',
-		fontFamily        : 'PTSans-Bold',
+		fontFamily        : 'CourierPrime-Bold',
 	},
 	modalText             : {
 		marginBottom      : 15,
 		textAlign         : 'center',
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
 	},
 	modalHeader           : {
 		marginBottom      : 15,
 		textAlign         : 'center',
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
 	},
 	centre                : {
 		alignItems        : 'center',
 	},
 	medText               : {
 		fontSize          : 16,
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
 	},
 	bigText               : {
 		fontSize          : 24,
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
 	},
 	permsText             : {
 		fontSize          : 12,
-		fontFamily        : 'PTSans-Regular',
+		fontFamily        : 'CourierPrime-Regular',
 		marginTop         : 5,
 		marginBottom      : 5,
 	},
@@ -168,7 +168,7 @@ export default styles = StyleSheet.create({
 		width             : "100%",
 		margin            : 12,
 		borderWidth       : 1,
-		borderColor       : '#d018ec',
+		borderColor       : '#7b8dac',
 		padding           : 10,
 	},
 	historyContainer      : {
@@ -176,7 +176,7 @@ export default styles = StyleSheet.create({
 		flexDirection     : 'row',
 		borderWidth       : 1,
 		borderRadius      : 5,
-		borderColor       : "#d018ec",
+		borderColor       : "#7b8dac",
 		padding           : 5,
 	},
 	historyTrackBar       : {

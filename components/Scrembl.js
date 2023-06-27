@@ -28,12 +28,86 @@ import {
     BackHandler,
     ActivityIndicator,
     Linking,
+	TextInput,
+	Keyboard,
+	KeyboardAvoidingView,
 } from 'react-native';
 
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faClipboard }     from '@fortawesome/free-solid-svg-icons';
+import Clipboard           from '@react-native-clipboard/clipboard';
+import { colours }         from '../constants';
+
+
 export default function () {
+	const [unScrembledText, setUnScrembledText] = useState('');
+	const [scrembledText,   setScrembledText  ] = useState('');
+	function copyToClipboard() {
+		console.log ("scrembledText : ", scrembledText);
+		Clipboard.setString(scrembledText);
+		ToastAndroid.show("Copied to Clipboard!", ToastAndroid.LONG);
+	}
+	async function pasteFromClipboard() {
+		const clipboardText = await Clipboard.getString();
+		setUnScrembledText(clipboardText);
+	}
+	function onScrembl() {
+		Keyboard.dismiss();
+		setScrembledText('scrembl');
+	}
 	return (
-		<View>
-			<Text>Scrembl</Text>
-		</View>
+		<KeyboardAvoidingView
+			behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
+			style={styles.centre}
+		>
+			<Text style={styles.medText}>Scrembl your message</Text>
+			<View style={styles.textInputContainer}>
+				<TouchableOpacity
+					style={styles.button}
+					onPress={() => pasteFromClipboard()}
+				>
+					<Text style={styles.buttonText}>
+						<FontAwesomeIcon  color={colours.scremblWhite} size={25} icon={faClipboard} />
+						<Text style={styles.textSmall}>Paste from Clipboard</Text>
+					</Text>
+				</TouchableOpacity>
+				<TextInput style={styles.textInput}
+					multiline
+					editable
+					onChangeText={text => setUnScrembledText(text)}
+					value={unScrembledText}
+					placeholder="Or type your message here"
+					numberOfLines={4}
+				 />
+			</View>
+            <TouchableOpacity
+                style={styles.button}
+                onPress={() => onScrembl()}
+            >
+                <Text style={styles.buttonText}>Scrembl</Text>
+            </TouchableOpacity>
+			{scrembledText !== '' &&
+				<>
+				<View style={styles.textInputContainer}>
+					<TextInput style={styles.textInput}
+						multiline
+						editable={false}
+						value={scrembledText}
+						placeholder="Scrembled message here"
+						maxLength={40}
+						numberOfLines={4}
+					 />
+				</View>
+				<TouchableOpacity
+					style={styles.button}
+					onPress={() => copyToClipboard()}
+				>
+					<Text style={styles.buttonText}>
+						<FontAwesomeIcon  color={colours.scremblWhite} size={25} icon={faClipboard} />
+					</Text>
+				</TouchableOpacity>
+				</>
+			}
+		</KeyboardAvoidingView>
 	);
 }

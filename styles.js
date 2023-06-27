@@ -164,12 +164,15 @@ export default styles = StyleSheet.create({
 		height            : 35,
 	},
 	textInput             : {
-		height            : 40,
+		textAlignVertical : 'top',
+		fontFamily        : 'CourierPrime-Regular',
+	},
+	textInputContainer    : {
 		width             : "100%",
-		margin            : 12,
 		borderWidth       : 1,
 		borderColor       : '#7b8dac',
 		padding           : 10,
+		borderRadius      : 5,
 	},
 	historyContainer      : {
 		flex              : 1,

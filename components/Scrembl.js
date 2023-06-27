@@ -46,7 +46,6 @@ export default function () {
 	const [unScrembledText, setUnScrembledText] = useState('');
 	const [scrembledText,   setScrembledText  ] = useState('');
 	function copyToClipboard() {
-		console.log ("scrembledText : ", scrembledText);
 		Clipboard.setString(scrembledText);
 		ToastAndroid.show("Copied to Clipboard!", ToastAndroid.LONG);
 	}

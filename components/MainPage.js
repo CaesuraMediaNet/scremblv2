@@ -38,11 +38,10 @@ import { colours } from '../constants';
 import Scrembl     from './Scrembl';
 import UnScrembl   from './UnScrembl';
 
-export default function MainPage () {
-	const [page, setPage] = useState('main');
+export default function MainPage ({page, setPages}) {
 	return (
 		<>
-		<Header page={'main'} setPage={setPage} />
+		<Header page={'main'} setPages={setPages} />
 		{page === 'main' &&
 		<>
 		<View style={styles.mainPageContainer}>
@@ -52,13 +51,13 @@ export default function MainPage () {
 			<View style={[styles.spaceAround, styles.mainButtonContainer]}>
 				<TouchableOpacity
 					style={styles.buttonSmall}
-					onPress={() => setPage('scrembl')}
+					onPress={() => setPages('scrembl')}
 				>
 					<Text style={styles.buttonText}>Scrembl</Text>
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={styles.buttonSmall}
-					onPress={() => setPage('unscrembl')}
+					onPress={() => setPages('unscrembl')}
 				>
 					<Text style={styles.buttonText}>UnScrembl</Text>
 				</TouchableOpacity>

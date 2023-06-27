@@ -31,6 +31,7 @@ import {
 	BackHandler,
 	ActivityIndicator,
 	Linking,
+	Alert,
 } from 'react-native';
 
 // FontAwesome.
@@ -73,6 +74,9 @@ import { colors }   from './constants';
 // The Scrembl App.
 //
 const App: () => Node = () => {
+	
+	const [page, setPage]         = useState('main');
+	const [prevPage, setPrevPage] = useState('main');
 
 	useEffect(() => {
 		SplashScreen.hide();
@@ -82,14 +86,36 @@ const App: () => Node = () => {
     //
     useEffect(() => {
         const backAction = () => {
-			return false;
+			if (page === 'main') {
+				Alert.alert('Aha!', 'Are you sure you want to exit Scrembl?', [
+					{
+						text    : 'Cancel',
+						onPress : () => null,
+						style   : 'cancel',
+					},
+					{
+						text    : 'YES',
+						onPress : () => BackHandler.exitApp()
+					},
+				]);
+				return true;
+			} else {
+				setPrevPage('main');
+				setPage(prevPage);
+				return true;
+			}
         };
         const backHandler = BackHandler.addEventListener(
             'hardwareBackPress',
             () => backAction (),
         );
         return () => backHandler.remove();
-    },[]);
+    },[page]);
+
+	function setPages(newPage) {
+		setPrevPage(page);
+		setPage(newPage);
+	}
 	return (
 		<SafeAreaView style={styles.container}>
 			<StatusBar />
@@ -97,7 +123,7 @@ const App: () => Node = () => {
 				contentInsetAdjustmentBehavior="automatic"
 				keyboardShouldPersistTaps='handled'
 			>
-				<MainPage />
+				<MainPage page={page} setPages={setPages}/>
 			</ScrollView>
 		</SafeAreaView>
 	);

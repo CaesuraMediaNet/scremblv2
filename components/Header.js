@@ -52,7 +52,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { colours } from '../constants';
 
-export default function Header ({ page, setPage }) {
+export default function Header ({ page, setPages }) {
 	return (
 		<View style={[styles.spaceBetween, styles.mauveBox]}>
 			<Image
@@ -63,17 +63,17 @@ export default function Header ({ page, setPage }) {
 				Scrembl
 			</Text>
 			<TouchableOpacity
-				onPress={() => setPage('scrembl') }
+				onPress={() => setPages('scrembl') }
 			>
 				<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faLock} />
 			</TouchableOpacity>
 			<TouchableOpacity
-				onPress={() => setPage('unscrembl') }
+				onPress={() => setPages('unscrembl') }
 			>
 				<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faUnlock} />
 			</TouchableOpacity>
 			<TouchableOpacity
-				onPress={() => setPage('main') }
+				onPress={() => setPages('main') }
 			>
 				<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faHouse} />
 			</TouchableOpacity>

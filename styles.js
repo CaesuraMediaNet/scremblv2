@@ -10,7 +10,7 @@ export default styles = StyleSheet.create({
     },
     title                 : {
 		fontFamily        : 'CourierPrime-Bold',
-        fontSize          : 36,
+        fontSize          : 30,
     },
     titleMed              : {
 		fontFamily        : 'CourierPrime-Bold',

@@ -7,10 +7,10 @@
 
 import React from 'react';
 
-import { useState }  from 'react';
-import { useEffect } from 'react';
-import { useRef }    from 'react';
-import type {Node}   from 'react';
+import { useState }      from 'react';
+import { useEffect }     from 'react';
+import { useRef }        from 'react';
+import type {Node}       from 'react';
 
 import {
 	SafeAreaView,
@@ -59,18 +59,16 @@ import SplashScreen   from 'react-native-splash-screen';
 // Local Components.
 //
 import styles       from './styles';
+import MainPage     from './components/MainPage';
 
 // Constants.
 //
 // Debug
 //
 
-// No magic numbers.
+// App context.
 //
-const scremblColour           = '#7b8dac';
-const scremblGrey             = 'dimgray';
-const scremblWhite            = 'white';
-
+import { colors }   from './constants';
 
 // The Scrembl App.
 //
@@ -92,60 +90,6 @@ const App: () => Node = () => {
         );
         return () => backHandler.remove();
     },[]);
-
-	function Header ({ page }) {
-		return (
-			<View style={[styles.spaceBetween, styles.mauveBox]}>
-				<Image
-					source={require ("./src/assets/images/scrembl-icon.png")}
-					style={styles.logoImage}
-				/>
-				<Text style={styles.title}>
-					Scrembl
-				</Text>
-				<TouchableOpacity
-					onPress={() => null }
-				>
-					<FontAwesomeIcon  color={scremblColour} size={35} icon={faGear} />
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() => null }
-				>
-					<FontAwesomeIcon  color={scremblColour} size={35} icon={faCalendar} />
-				</TouchableOpacity>
-				<TouchableOpacity
-					onPress={() => null }
-				>
-					<FontAwesomeIcon  color={scremblColour} size={35} icon={faHouse} />
-				</TouchableOpacity>
-			</View>
-		);
-	}
-
-	function MainPage () {
-		return (
-			<>
-			<Header page={'main'}/>
-			<View style={styles.mainPageContainer}>
-				<Text style={styles.bigText}>
-					I have a message to : 
-				</Text>
-				<TouchableOpacity
-					style={styles.button}
-					onPress={() => null}
-				>
-					<Text style={styles.buttonText}>Scrembl</Text>
-				</TouchableOpacity>
-				<TouchableOpacity
-					style={styles.button}
-					onPress={() => null}
-				>
-					<Text style={styles.buttonText}>UnScrembl</Text>
-				</TouchableOpacity>
-			</View>
-			</>
-		)
-	}
 	return (
 		<SafeAreaView style={styles.container}>
 			<StatusBar />

@@ -37,7 +37,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faClipboard }     from '@fortawesome/free-solid-svg-icons';
 import Clipboard           from '@react-native-clipboard/clipboard';
 import { colours }         from '../constants';
-
+import { scrembl }         from '../functions/gubbins';
 
 export default function () {
 	const [unScrembledText, setUnScrembledText] = useState('');
@@ -53,7 +53,8 @@ export default function () {
 	}
 	function onScrembl() {
 		Keyboard.dismiss();
-		setScrembledText('scrembl');
+		let obfusticated = scrembl(unScrembledText);
+		setScrembledText(obfusticated);
 	}
 	return (
 		<KeyboardAvoidingView

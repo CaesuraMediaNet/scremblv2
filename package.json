@@ -21,6 +21,7 @@
     "add": "^2.0.6",
     "babel-plugin-react-native-classname-to-style": "^1.2.2",
     "babel-plugin-react-native-platform-specific-extensions": "^1.1.1",
+    "js-base64": "^3.7.5",
     "react": "18.0.0",
     "react-native": "0.69.6",
     "react-native-css-transformer": "^1.2.4",

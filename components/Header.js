@@ -53,6 +53,7 @@ import {
 import { colours } from '../constants';
 
 export default function Header ({ page, setPages }) {
+	console.log ("page : ", page);
 	return (
 		<View style={[styles.spaceBetween, styles.mauveBox]}>
 			<Image
@@ -62,21 +63,27 @@ export default function Header ({ page, setPages }) {
 			<Text style={styles.title}>
 				Scrembl
 			</Text>
-			<TouchableOpacity
-				onPress={() => setPages('scrembl') }
-			>
-				<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faLock} />
-			</TouchableOpacity>
-			<TouchableOpacity
-				onPress={() => setPages('unscrembl') }
-			>
-				<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faUnlock} />
-			</TouchableOpacity>
-			<TouchableOpacity
-				onPress={() => setPages('main') }
-			>
-				<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faHouse} />
-			</TouchableOpacity>
+			{page.match(/main|unscrembl/) &&
+				<TouchableOpacity
+					onPress={() => setPages('scrembl') }
+				>
+					<FontAwesomeIcon  color={colours.scremblColour} size={30} icon={faLock} />
+				</TouchableOpacity>
+			}
+			{page.match(/main|^scrembl/) &&
+				<TouchableOpacity
+					onPress={() => setPages('unscrembl') }
+				>
+					<FontAwesomeIcon  color={colours.scremblColour} size={30} icon={faUnlock} />
+				</TouchableOpacity>
+			}
+			{page.match(/scrembl/) &&
+				<TouchableOpacity
+					onPress={() => setPages('main') }
+				>
+					<FontAwesomeIcon  color={colours.scremblColour} size={30} icon={faHouse} />
+				</TouchableOpacity>
+			}
 		</View>
 	);
 }

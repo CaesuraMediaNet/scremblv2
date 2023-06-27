@@ -66,13 +66,13 @@ export default function () {
 		<KeyboardAvoidingView
 			behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
 		>
-			<View style={styles.spaceBetween}>
-				<Text style={styles.medText}>Scrembl your message</Text>
+			<View style={[styles.spaceBetween, styles.mauveBox]}>
+				<Text style={styles.textBoldMed}>Scrembl your message</Text>
 				<TouchableOpacity
 					style={styles.clearIcon}
 					onPress={() => clearText()}
 				>
-					<FontAwesomeIcon  color={colours.scremblColour} size={25} icon={faTrash} />
+					<FontAwesomeIcon  color={colours.scremblColour} size={30} icon={faTrash} />
 				</TouchableOpacity>
 			</View>
 			<View style={styles.textInputContainer}>
@@ -80,10 +80,10 @@ export default function () {
 					style={styles.button}
 					onPress={() => pasteFromClipboard()}
 				>
-					<Text style={styles.buttonText}>
-						<FontAwesomeIcon  color={colours.scremblWhite} size={25} icon={faClipboard} />
-						<Text style={styles.textSmall}>Paste from Clipboard</Text>
-					</Text>
+					<View style={styles.spaceBetween}>
+						<FontAwesomeIcon  color={colours.scremblWhite} size={30} icon={faClipboard} />
+						<Text style={styles.textStyle}> Paste from Clipboard</Text>
+					</View>
 				</TouchableOpacity>
 				<TextInput style={styles.textInput}
 					multiline
@@ -100,6 +100,7 @@ export default function () {
             >
                 <Text style={styles.buttonText}>Scrembl</Text>
             </TouchableOpacity>
+			<Text></Text>
 			{scrembledText !== '' &&
 				<>
 				<View style={styles.textInputContainer}>
@@ -109,15 +110,16 @@ export default function () {
 						placeholder="Scrembled message here"
 						numberOfLines={4}
 					 />
+					<TouchableOpacity
+						style={styles.button}
+						onPress={() => copyToClipboard()}
+					>
+						<View style={styles.spaceBetween}>
+							<FontAwesomeIcon  color={colours.scremblWhite} size={30} icon={faClipboard} />
+							<Text style={styles.textStyle}> Copy to Clipboard</Text>
+						</View>
+					</TouchableOpacity>
 				</View>
-				<TouchableOpacity
-					style={styles.button}
-					onPress={() => copyToClipboard()}
-				>
-					<Text style={styles.buttonText}>
-						<FontAwesomeIcon  color={colours.scremblWhite} size={25} icon={faClipboard} />
-					</Text>
-				</TouchableOpacity>
 				</>
 			}
 		</KeyboardAvoidingView>

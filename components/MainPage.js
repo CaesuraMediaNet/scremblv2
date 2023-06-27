@@ -41,7 +41,7 @@ import UnScrembl   from './UnScrembl';
 export default function MainPage ({page, setPages}) {
 	return (
 		<>
-		<Header page={'main'} setPages={setPages} />
+		<Header page={page} setPages={setPages} />
 		{page === 'main' &&
 		<>
 		<View style={styles.mainPageContainer}>

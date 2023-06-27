@@ -26,7 +26,7 @@ export default styles = StyleSheet.create({
 	},
 	textBoldMed           : {
 		fontFamily        : 'CourierPrime-Bold',
-        fontSize          : 24,
+        fontSize          : 16,
 	},
 	marginVert            : {
 		marginVertical    : 10,
@@ -149,6 +149,7 @@ export default styles = StyleSheet.create({
 		fontFamily        : 'CourierPrime-Regular',
 	},
 	textStyle             : {
+		fontSize          : 12,
 		color             : 'white',
 		textAlign         : 'center',
 		fontFamily        : 'CourierPrime-Bold',

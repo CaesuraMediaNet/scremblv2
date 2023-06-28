@@ -42,7 +42,7 @@ import Clipboard           from '@react-native-clipboard/clipboard';
 import { colours }         from '../constants';
 import { unScrembl }       from '../functions/gubbins';
 
-export default function () {
+export default function ({scrollRef}) {
 	const [scrembledText,   setScrembledText  ] = useState('');
 	const [unScrembledText, setUnScrembledText] = useState('');
 	function copyToClipboard() {
@@ -57,6 +57,7 @@ export default function () {
 		Keyboard.dismiss();
 		let unobfusticated = unScrembl(scrembledText);
 		setUnScrembledText(unobfusticated);
+		scrollRef.current.scrollToEnd();
 	}
 	function clearText() {
 		setUnScrembledText('');

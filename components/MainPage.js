@@ -38,7 +38,7 @@ import { colours } from '../constants';
 import Scrembl     from './Scrembl';
 import UnScrembl   from './UnScrembl';
 
-export default function MainPage ({page, setPages}) {
+export default function MainPage ({page, setPages, scrollRef}) {
 	return (
 		<>
 		<Header page={page} setPages={setPages} />
@@ -75,10 +75,10 @@ export default function MainPage ({page, setPages}) {
 		</>
 		}
 		{page === 'scrembl' &&
-			<Scrembl />
+			<Scrembl scrollRef={scrollRef} />
 		}
 		{page === 'unscrembl' &&
-			<UnScrembl />
+			<UnScrembl scrollRef={scrollRef} />
 		}
 		</>
 	)

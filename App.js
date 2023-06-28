@@ -51,6 +51,7 @@ import {
 	faHouse,
 	faCircleDot,
 	faFloppyDisk,
+	faAngleUp,
 } from '@fortawesome/free-solid-svg-icons';
 
 // Other community libs.
@@ -69,7 +70,7 @@ import MainPage     from './components/MainPage';
 
 // App context.
 //
-import { colors }   from './constants';
+import { colours }  from './constants';
 
 // The Scrembl App.
 //
@@ -77,6 +78,8 @@ const App: () => Node = () => {
 	
 	const [page, setPage]         = useState('main');
 	const [prevPage, setPrevPage] = useState('main');
+	const [scrolled,setScrolled]  = useState(false);
+	const scrollRef               = useRef();
 
 	useEffect(() => {
 		SplashScreen.hide();
@@ -116,14 +119,24 @@ const App: () => Node = () => {
 		setPrevPage(page);
 		setPage(newPage);
 	}
+	function BackToTop () {
+		return (
+			<View style={{position: 'absolute', bottom : 5, right : 5, zIndex : 1}}>
+				<FontAwesomeIcon  color={'#ff0000'} size={50} icon={faAngleUp} />
+			</View>
+		);
+	}
 	return (
 		<SafeAreaView style={styles.container}>
 			<StatusBar />
 			<ScrollView
+				ref={scrollRef}
 				contentInsetAdjustmentBehavior="automatic"
 				keyboardShouldPersistTaps='handled'
+				onScroll={() => setScrolled(true)}
 			>
-				<MainPage page={page} setPages={setPages}/>
+				<MainPage page={page} setPages={setPages} scrollRef={scrollRef}/>
+				{/*scrolled && <BackToTop />*/}
 			</ScrollView>
 		</SafeAreaView>
 	);

@@ -18,6 +18,10 @@ export default styles = StyleSheet.create({
     },
 	textSmall             : {
 		fontFamily        : 'CourierPrime-Regular',
+        fontSize          : 12,
+	},
+	textSmallItalic       : {
+		fontFamily        : 'CourierPrime-BoldItalic',
         fontSize          : 10,
 	},
 	textBoldSmall         : {
@@ -30,6 +34,9 @@ export default styles = StyleSheet.create({
 	},
 	marginVert            : {
 		marginVertical    : 10,
+	},
+	bigMarginTop          : {
+		marginTop         : 100,
 	},
 	settingsContainer     : {
 		marginTop         : '33%',
@@ -212,5 +219,11 @@ export default styles = StyleSheet.create({
 	clearIcon             : {
 		padding           : 15,
 		alignSelf         : 'flex-end',
+	},
+	backToTop             : {
+		position          : 'absolute',
+		bottom            : 45,
+		right             : 0,
+		zIndex            : 1,
 	},
 });

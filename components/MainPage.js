@@ -69,7 +69,15 @@ export default function MainPage ({page, setPages, scrollRef}) {
 				back here to see what you wrote!
 			</Text>
 			<Text style={[styles.textSmall, styles.marginVert]}>
-				No messages are stored anywhere, not even in this App, your secrets are safe.
+				No messages are stored anywhere, not even in this App, your messages are safe.
+			</Text>
+			<Text style={[styles.textSmall, styles.marginVert]}>
+				Scrembled messages are only valid for 24 hours.
+			</Text>
+			<Text style={[styles.textSmall, styles.bigMarginTop, styles.margin]}>
+				(Note that this is not "encryption" but obfustication. You can unScrembl a message
+				without using this App if you know how the obfustication algorithm works (it is online
+				under our "github" account). This Scrembl App is meant to be occassionally useful.)
 			</Text>
 		</View>
 		</>

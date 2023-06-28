@@ -55,9 +55,11 @@ export default function ({scrollRef}) {
 	}
 	function onScrembl() {
 		Keyboard.dismiss();
-		let obfusticated = scrembl(unScrembledText);
-		setScrembledText(obfusticated);
-		scrollRef.current.scrollToEnd();
+		if (unScrembledText) {
+			let obfusticated = scrembl(unScrembledText);
+			setScrembledText(obfusticated);
+			scrollRef.current.scrollToEnd();
+		}
 	}
 	function clearText() {
 		setUnScrembledText('');

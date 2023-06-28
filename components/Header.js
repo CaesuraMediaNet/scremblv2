@@ -53,7 +53,6 @@ import {
 import { colours } from '../constants';
 
 export default function Header ({ page, setPages }) {
-	console.log ("page : ", page);
 	return (
 		<View style={[styles.spaceBetween, styles.mauveBox]}>
 			<Image

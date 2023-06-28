@@ -123,7 +123,7 @@ const App: () => Node = () => {
 		//https://spin.atomicobject.com/2021/04/20/react-native-building-scroll-top-button/
 		//
 		return (
-			<View style={{position: 'absolute', bottom : 45, right : 0, zIndex : 1}}>
+			<View style={styles.backToTop}>
 				<TouchableOpacity
                     style={styles.clearIcon}
                     onPress={() => scrollRef.current.scrollTo({ x: 0, y : 0, animated: true })}

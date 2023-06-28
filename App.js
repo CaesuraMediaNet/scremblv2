@@ -76,10 +76,10 @@ import { colours }  from './constants';
 //
 const App: () => Node = () => {
 	
-	const [page, setPage]         = useState('main');
-	const [prevPage, setPrevPage] = useState('main');
-	const [scrolled,setScrolled]  = useState(false);
-	const scrollRef               = useRef();
+	const [page, setPage]                                   = useState('main');
+	const [prevPage, setPrevPage]                           = useState('main');
+	const [contentVerticalOffset, setContentVerticalOffset] = useState(0);
+	const scrollRef                                         = useRef();
 
 	useEffect(() => {
 		SplashScreen.hide();
@@ -120,9 +120,16 @@ const App: () => Node = () => {
 		setPage(newPage);
 	}
 	function BackToTop () {
+		//https://spin.atomicobject.com/2021/04/20/react-native-building-scroll-top-button/
+		//
 		return (
-			<View style={{position: 'absolute', bottom : 5, right : 5, zIndex : 1}}>
-				<FontAwesomeIcon  color={'#ff0000'} size={50} icon={faAngleUp} />
+			<View style={{position: 'absolute', bottom : 45, right : 0, zIndex : 1}}>
+				<TouchableOpacity
+                    style={styles.clearIcon}
+                    onPress={() => scrollRef.current.scrollTo({ x: 0, y : 0, animated: true })}
+                >
+					<FontAwesomeIcon  color={colours.scremblColour} size={50} icon={faAngleUp} />
+				</TouchableOpacity>
 			</View>
 		);
 	}
@@ -133,10 +140,12 @@ const App: () => Node = () => {
 				ref={scrollRef}
 				contentInsetAdjustmentBehavior="automatic"
 				keyboardShouldPersistTaps='handled'
-				onScroll={() => setScrolled(true)}
+				onScroll={event => {
+					setContentVerticalOffset(event.nativeEvent.contentOffset.y);
+				}}
 			>
 				<MainPage page={page} setPages={setPages} scrollRef={scrollRef}/>
-				{/*scrolled && <BackToTop />*/}
+				{contentVerticalOffset > 200 && <BackToTop />}
 			</ScrollView>
 		</SafeAreaView>
 	);

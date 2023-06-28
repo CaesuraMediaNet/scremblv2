@@ -107,6 +107,7 @@ export default function ({scrollRef}) {
 				<View style={styles.textInputContainer}>
 					<TextInput style={styles.textInput}
 						multiline
+						editable={false}
 						value={unScrembledText}
 						placeholder="UnScrembled message here"
 						numberOfLines={4}

@@ -188,6 +188,7 @@ export default styles = StyleSheet.create({
 	textInput             : {
 		textAlignVertical : 'top',
 		fontFamily        : 'CourierPrime-Regular',
+		color             : 'black',
 	},
 	textInputContainer    : {
 		width             : "100%",

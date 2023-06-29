@@ -221,9 +221,13 @@ export default styles = StyleSheet.create({
 		alignSelf         : 'flex-end',
 	},
 	backToTop             : {
-		position          : 'absolute',
-		bottom            : 45,
-		right             : 0,
-		zIndex            : 1,
+		flexDirection     : 'row',
+		alignItems        : 'center',
+	},
+	hideBTT               : {
+		flexDirection     : 'row',
+		alignItems        : 'center',
+		opacity           : 0,
+		height            : 0,
 	},
 });

@@ -52,6 +52,7 @@ export default function ({scrollRef}) {
 	async function pasteFromClipboard() {
 		const clipboardText = await Clipboard.getString();
 		setScrembledText(clipboardText);
+		scrollRef.current.scrollToEnd();
 	}
 	function onUnScrembl() {
 		Keyboard.dismiss();
@@ -89,10 +90,11 @@ export default function ({scrollRef}) {
 					</View>
 				</TouchableOpacity>
 				<TextInput style={styles.textInput}
+					editable={false}
 					multiline
 					onChangeText={text => setScrembledText(text)}
 					value={scrembledText}
-					placeholder="Or type your Scrembled message here"
+					placeholder="Make sure your Scrembled message is in the clipboard."
 					numberOfLines={4}
 				 />
 			</View>

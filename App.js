@@ -65,6 +65,8 @@ import MainPage     from './components/MainPage';
 
 // Constants.
 //
+const minScrollHeight = 150; // Or : Dimensions.get('window').height / something;
+console.log ("minScrollHeight : ", minScrollHeight);
 // Debug
 //
 
@@ -123,14 +125,15 @@ const App: () => Node = () => {
 		//https://spin.atomicobject.com/2021/04/20/react-native-building-scroll-top-button/
 		//
 		return (
-			<View style={styles.backToTop}>
-				<TouchableOpacity
-                    style={styles.clearIcon}
-                    onPress={() => scrollRef.current.scrollTo({ x: 0, y : 0, animated: true })}
-                >
+			<TouchableOpacity
+				style={styles.clearIcon}
+				onPress={() => scrollRef.current.scrollTo({ x: 0, y : 0, animated: true })}
+			>
+				<View style={contentVerticalOffset > minScrollHeight ? styles.backToTop : styles.hideBTT}>
+					<Text style={styles.medText}>Back To Top</Text>
 					<FontAwesomeIcon  color={colours.scremblColour} size={50} icon={faAngleUp} />
-				</TouchableOpacity>
-			</View>
+				</View>
+			</TouchableOpacity>
 		);
 	}
 	return (
@@ -141,11 +144,12 @@ const App: () => Node = () => {
 				contentInsetAdjustmentBehavior="automatic"
 				keyboardShouldPersistTaps='handled'
 				onScroll={event => {
+					console.log ("event.nativeEvent.contentOffset.y : ", event.nativeEvent.contentOffset.y);
 					setContentVerticalOffset(event.nativeEvent.contentOffset.y);
 				}}
 			>
 				<MainPage page={page} setPages={setPages} scrollRef={scrollRef}/>
-				{contentVerticalOffset > 200 && <BackToTop />}
+				<BackToTop />
 			</ScrollView>
 		</SafeAreaView>
 	);

@@ -50,8 +50,10 @@ export default function ({scrollRef}) {
 		ToastAndroid.show("Copied to Clipboard!", ToastAndroid.LONG);
 	}
 	async function pasteFromClipboard() {
+		Keyboard.dismiss();
 		const clipboardText = await Clipboard.getString();
 		setUnScrembledText(clipboardText);
+		setTimeout(() => scrollRef.current.scrollToEnd(), 100);
 	}
 	function onScrembl() {
 		Keyboard.dismiss();

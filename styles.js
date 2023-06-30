@@ -228,6 +228,5 @@ export default styles = StyleSheet.create({
 		flexDirection     : 'row',
 		alignItems        : 'center',
 		opacity           : 0,
-		height            : 0,
 	},
 });

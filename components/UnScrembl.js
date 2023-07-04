@@ -47,7 +47,7 @@ export default function ({scrollRef}) {
    const [unScrembledText, setUnScrembledText] = useState('');
    function copyToClipboard() {
       Clipboard.setString(unScrembledText);
-      ToastAndroid.show("Copied to Clipboard!", ToastAndroid.LONG);
+      ToastAndroid.showWithGravity("Copied to Clipboard!", ToastAndroid.LONG, ToastAndroid.CENTER);
    }
    async function pasteFromClipboard() {
       const clipboardText = await Clipboard.getString();

@@ -30,7 +30,7 @@ export default styles = StyleSheet.create({
    },
    textBoldMed          : {
       fontFamily        : 'CourierPrime-Bold',
-      fontSize          : 15,
+      fontSize          : 14,
    },
    marginVert           : {
       marginVertical    : 10,

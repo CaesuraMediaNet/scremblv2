@@ -30,13 +30,13 @@ export default styles = StyleSheet.create({
    },
    textBoldMed          : {
       fontFamily        : 'CourierPrime-Bold',
-      fontSize          : 16,
+      fontSize          : 15,
    },
    marginVert           : {
       marginVertical    : 10,
    },
    subTitle             : {
-      paddingVertical   : 12,
+      paddingVertical   : 13,
       paddingHorizontal : 10,
    },
    width100             : {
@@ -208,7 +208,7 @@ export default styles = StyleSheet.create({
       borderRadius      : 5,
    },
    clearIcon            : {
-      padding           : 15,
+      padding           : 4,
       alignSelf         : 'flex-end',
    },
    backToTop            : {

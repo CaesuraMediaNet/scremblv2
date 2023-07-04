@@ -71,14 +71,20 @@ export default function ({scrollRef}) {
       <KeyboardAvoidingView
          behavior={Platform.OS === 'ios' ? 'padding' : 'padding'}
       >
-         <View style={[styles.spaceBetween, styles.mauveBox]}>
-            <Text style={styles.textBoldMed}>Scrembl your message</Text>
-            <TouchableOpacity
-               style={styles.clearIcon}
-               onPress={() => clearText()}
-            >
-               <FontAwesomeIcon  color={colours.scremblColour} size={30} icon={faTrash} />
-            </TouchableOpacity>
+         <View style={[styles.spaceBetween]}>
+            <View style={[styles.mauveBox, styles.subTitle, unScrembledText ? '' : styles.width100 ]}>
+               <Text style={styles.textBoldMed}>Scrembl your message</Text>
+            </View>
+            {unScrembledText &&
+               <View style={[styles.subTitle]}>
+                  <TouchableOpacity
+                     style={styles.clearIcon}
+                     onPress={() => clearText()}
+                  >
+                     <FontAwesomeIcon  color={colours.scremblColour} size={30} icon={faTrash} />
+                  </TouchableOpacity>
+               </View>
+            }
          </View>
          <View style={styles.textInputContainer}>
             <TouchableOpacity

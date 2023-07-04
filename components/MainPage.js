@@ -65,19 +65,28 @@ export default function MainPage ({page, setPages, scrollRef}) {
       </View>
       <View>
          <Text style={[styles.textSmall, styles.marginVert]}>
-            Convert plain text into gobbldegook, paste that into your socials and other people can paste it
-            back here to see what you wrote!
+            Convert plain text into  gobbledy-
+            {"\n"}
+            gook, paste that into your socials
+            {"\n"}
+            and other people can paste it back
+            {"\n"}
+            here to see what you wrote!
          </Text>
          <Text style={[styles.textSmall, styles.marginVert]}>
-            No messages are stored anywhere, not even in this App, your messages are safe.
+            No  messages  are  stored anywhere, 
+            {"\n"}
+            not even in this App, your messages
+            {"\n"}
+            are safe.
          </Text>
          <Text style={[styles.textSmall, styles.marginVert]}>
-            Scrembled messages are only valid for 24 hours.
-         </Text>
-         <Text style={[styles.textSmall, styles.bigMarginTop, styles.margin]}>
-            (Note that this is not "encryption" but obfustication. You can unScrembl a message
-            without using this App if you know how the obfustication algorithm works (it is online
-            under our "github" account). This Scrembl App is meant to be occassionally useful.)
+            As  an  extra   security   measure,
+            {"\n"}
+            Scrembled  messages  are only valid
+            {"\n"}
+            for 24
+            hours.
          </Text>
       </View>
       </>
